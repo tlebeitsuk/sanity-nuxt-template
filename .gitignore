@@ -1,0 +1,11 @@
+# .gitignore
+node_modules
+dist
+build
+*.log*
+.cache
+.env
+.env.local
+
+.DS_Store
+*.pem
