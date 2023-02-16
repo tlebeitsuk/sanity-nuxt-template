@@ -4,10 +4,10 @@
   "scripts": {
     "dev": "pnpm --stream -r run dev",
     "build": "pnpm --stream -r run build",
-		"app:dev": "pnpm --filter app run dev",
+    "app:dev": "pnpm --filter app run dev",
     "app:build": "pnpm --filter app run build",
     "app:preview": "pnpm --filter app run preview",
-		"studio:dev": "pnpm --filter studio run dev",
-		"studio:build": "pnpm --filter studio run build"
+    "studio:dev": "pnpm --filter studio run dev",
+    "studio:build": "pnpm --filter studio run build"
   }
 }

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <SeoKit />
-    <NuxtWelcome />
+    <NuxtLayout>
+      <SeoKit />
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>

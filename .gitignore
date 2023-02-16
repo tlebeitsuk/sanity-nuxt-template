@@ -5,7 +5,6 @@ build
 *.log*
 .cache
 .env
-.env.local
 
 .DS_Store
 *.pem

@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: true,
   runtimeConfig: {
     public: {
       siteUrl: 'https://example.com',
@@ -8,16 +9,27 @@ export default defineNuxtConfig({
       language: 'en', // prefer more explicit language codes like `en-AU` over `en`
     },
   },
-  modules: [
-    'nuxt-security',
-    '@vueuse/nuxt',
-    '@unocss/nuxt',
-    '@nuxt/image-edge',
-    'nuxt-headlessui',
-    'nuxt-icon',
-    '@nuxtjs/sanity',
-  ],
+  modules: ['@vueuse/nuxt', '@unocss/nuxt', '@nuxt/image-edge', 'nuxt-headlessui', 'nuxt-icon', '@nuxtjs/sanity'],
   extends: ['nuxt-seo-kit'],
+  sanity: {
+    projectId: 'q5xwb92a',
+    dataset: 'production',
+    additionalClients: {
+      preview: {
+        withCredentials: true,
+        useCdn: false,
+      },
+    },
+  },
+  image: {
+    domains: ['https://cdn.sanity.io'],
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/', '/test'],
+    },
+  },
   typescript: {
     strict: true,
     // typeCheck: true,
