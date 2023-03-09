@@ -9,7 +9,15 @@ export default defineNuxtConfig({
       language: 'en', // prefer more explicit language codes like `en-AU` over `en`
     },
   },
-  modules: ['@vueuse/nuxt', '@unocss/nuxt', '@nuxt/image-edge', 'nuxt-headlessui', 'nuxt-icon', '@nuxtjs/sanity'],
+  modules: [
+    '@vueuse/nuxt',
+    '@vueuse/motion/nuxt',
+    '@unocss/nuxt',
+    '@nuxt/image-edge',
+    '@nuxtjs/sanity',
+    'nuxt-headlessui',
+    'nuxt-icon',
+  ],
   extends: ['nuxt-seo-kit'],
   sanity: {
     projectId: 'q5xwb92a',
@@ -20,6 +28,9 @@ export default defineNuxtConfig({
         useCdn: false,
       },
     },
+  },
+  unocss: {
+    preflight: true,
   },
   image: {
     domains: ['https://cdn.sanity.io'],

@@ -13,7 +13,7 @@ const page = ref<Page | null>()
 // Fetch the page by slug
 const query = groq`*[_type == "page" && slug.current == $slug] | order(_updatedAt desc) [0]`
 
-const { pending, data } = await useLazyAsyncData('page', () => sanity.fetch<Page>(query, { slug: route.params.slug }))
+const { pending, data } = await useAsyncData('page', () => sanity.fetch<Page>(query, { slug: route.params.slug }))
 page.value = data.value
 
 const serializers = {
@@ -33,6 +33,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <h1 v-if="pending">Loading...</h1>
-  <SanityContent v-else :blocks="page?.body" :serializers="serializers" />
+  <div class="p-2">
+    <h1 v-if="pending">Loading...</h1>
+    <SanityContent v-else :blocks="page?.body" :serializers="serializers" />
+  </div>
 </template>
