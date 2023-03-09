@@ -26,3 +26,19 @@ Make sure to install the dependencies:
 # pnpm
 pnpm install
 ```
+
+## Development Server
+
+Start the Nuxt development server on http://localhost:3000 and the Sanity studio on http://localhost:3333
+
+```bash
+pnpm dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+pnpm build
+```

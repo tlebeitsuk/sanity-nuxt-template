@@ -35,12 +35,6 @@ export default defineNuxtConfig({
   image: {
     domains: ['https://cdn.sanity.io'],
   },
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ['/', '/test'],
-    },
-  },
   typescript: {
     strict: true,
     // typeCheck: true,

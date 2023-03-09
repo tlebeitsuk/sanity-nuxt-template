@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <NuxtLayout>
-      <SeoKit />
-      <NuxtPage />
-    </NuxtLayout>
-  </div>
+  <NuxtLayout>
+    <SeoKit />
+    <OgImageScreenshot />
+    <OgImageStatic />
+    <NuxtPage />
+  </NuxtLayout>
 </template>
