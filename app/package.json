@@ -12,7 +12,7 @@
   "devDependencies": {
     "@nuxt/image-edge": "1.0.0-27968280.9739e4d",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "@types/node": "^18.14.6",
+    "@types/node": "^18.15.0",
     "@unocss/eslint-config": "^0.50.4",
     "@unocss/nuxt": "^0.50.4",
     "@unocss/reset": "^0.50.4",

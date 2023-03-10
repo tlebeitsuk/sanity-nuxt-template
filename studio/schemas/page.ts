@@ -1,4 +1,4 @@
-import { DocumentIcon} from '@sanity/icons'
+import { DocumentIcon, ImageIcon } from '@sanity/icons'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -53,41 +53,14 @@ export default defineType({
     }),
     defineField({
       type: 'array',
-      name: 'body',
-      title: 'Body',
-      description:
-        "This is where you can write the page's content. Including custom blocks like timelines for more a more visual display of information.",
-     of: [
-      {
-        type: 'block',
-        title: 'Block',
-        marks: {
-          annotations: [
-            {
-              name: 'internalLink',
-              type: 'object',
-              title: 'Internal link',
-              fields: [
-                {
-                  name: 'reference',
-                  type: 'reference',
-                  to: [{ type: 'page' }],
-                },
-                
-          ],
-
-      },
-    ]
-    }
-  },
-  {
-    type: 'image',
-    options: {hotspot: true},
-  },
-  ],
-
-  }),
-
+      name: 'pageBuilder',
+      title: 'Page Builder',
+      of: [
+        defineArrayMember({
+          type: 'hero'
+        }),
+      ],
+    }),
   ],
   preview: {
     select: {

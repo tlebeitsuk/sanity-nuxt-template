@@ -20,8 +20,8 @@ export default defineNuxtConfig({
   ],
   extends: ['nuxt-seo-kit'],
   sanity: {
-    projectId: 'q5xwb92a',
-    dataset: 'production',
+    projectId: process.env.SANITY_PROJECT_ID,
+    dataset: process.env.SANITY_DATASET,
     additionalClients: {
       preview: {
         withCredentials: true,

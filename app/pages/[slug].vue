@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Image from '~/components/Image.vue'
-
 interface Page {
   title: string
   body: any[]
@@ -17,12 +15,6 @@ const query = groq`*[_type == "page" && slug.current == $slug] | order(_updatedA
 const { data } = await useAsyncData('page', () => sanity.fetch<Page>(query, { slug: route.params.slug }))
 page.value = data.value
 
-const serializers = {
-  types: {
-    image: Image,
-  },
-}
-
 onMounted(() => {
   if (route.query.preview) {
     // @ts-ignore
@@ -34,13 +26,19 @@ onMounted(() => {
 </script>
 
 <template>
-  <!--  <Breadcrumbs>
+  <div>
+    <!--  <Breadcrumbs>
       <template #breadcrumb="{ to, title }" class="!flex w-full">
         <NuxtLink :to="to">
           {{ title }}
         </NuxtLink>
       </template>
-    </Breadcrumbs> -->
+    </Breadcrumbs> 
 
-  <SanityContent :blocks="page?.body" :serializers="serializers" />
+  <SanityContent :blocks="page?.pageBuilder" :serializers="serializers" />
+  -->
+    <div v-for="section in page?.pageBuilder" :key="section._key">
+      <component :is="section._type" :data="section" />
+    </div>
+  </div>
 </template>
