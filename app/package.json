@@ -10,7 +10,7 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@nuxt/image-edge": "1.0.0-27990059.c3f31ce",
+    "@nuxt/image-edge": "1.0.0-28101255.bece998",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@types/node": "^18.15.5",
     "@unocss/eslint-config": "^0.50.6",
