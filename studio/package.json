@@ -17,7 +17,7 @@
     "sanity-plugin-asset-source-unsplash": "^1.0.6",
     "sanity-plugin-iframe-pane": "^2.2.0",
     "sanity-plugin-media": "^2.0.5",
-    "styled-components": "^5.3.9"
+    "styled-components": "^6.0.3"
   },
   "devDependencies": {
     "@sanity/eslint-config-studio": "^2.0.1",
